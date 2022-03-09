@@ -26,6 +26,15 @@
   align-items: center;
   justify-content: center;
 }
+.fa-bars{
+  position: absolute;
+  top: 2rem;
+  font-size: 30px;
+  right: 5rem;
+  z-index: 1;
+  visibility: hidden;
+  display: none;
+}
 .img-background-sessao{
   position: absolute;
   left: 30%;
@@ -48,7 +57,6 @@
   top: 1rem;
 }
 .menu-wrapper>.links-internos>a{
-
   display:inline-block;
   text-decoration: none;
   color: #fff;
@@ -127,12 +135,12 @@
   flex-wrap: wrap;
   position: relative;
   align-items: center;
+  justify-content: space-around;
   overflow:hidden;
 }
 
 .sessao-principal>.title-section{
   position: absolute;
-  text-align: center;
   top: 2rem;
   left: 7rem;
   font-size:30px;
@@ -159,12 +167,6 @@
 .text-introducing{
   margin: 2rem 0;
 }
-.img-section{
-  position: absolute;
-  right: -15rem;
-}
-
-
 
 .sessao-smartphone{
   position: relative;
@@ -185,20 +187,17 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: .2 ;
   top: -45rem;
   left: -1rem;
   transform:scale(1.4)
 }
 .smartphone-img>img{
-  position: absolute;
-  left:20rem;
-  top: 1rem;
   width:18rem;
-  z-index: 5;
+  z-index: 1;
 }
 .text-section-smartphone{
-  position: absolute;
-  right: 15rem;
+
   width: 30%;
   color: #fff;
   font-family: var(--font--1);
@@ -211,24 +210,16 @@
 
 .sessao-desktop{
   height:100vh;
-  position: relative;
-  width: 100% ;
-  display: flex;
-  flex-wrap: wrap;
+  display:flex;
   align-items: center;
-  justify-content: center;  
+  width: 100% ;
+  flex-wrap: wrap;
+  justify-content: space-around;  
   overflow: hidden;
 }
-.img-laptop{
-  position: absolute;
-  left:-17rem;
-}
 .text-sessao-desktop{
-  position: absolute;
-  width: 30%;
-  right: 2rem;
-  margin:1rem;
   font-family: var(--font--1);
+  width: 50%;
 }
 
 .text-open-simp{
@@ -285,3 +276,91 @@
   background-color:#788a;
 }
 
+
+@media(max-width:1109px){
+  .sessao-header{
+
+  }
+
+  .sessao-smartphone{
+    display:flex;
+    flex-direction: column;
+    height:60vh;
+  }
+}
+
+@media(max-width:1013px){
+  .sessao-desktop{
+    height:150vh
+  }
+}
+
+@media(max-width:746px){
+  .sessao-principal{
+    height:150vh;
+  }
+  .img-section{
+    position: relative;
+    top: 4em;
+  }
+}
+
+
+
+@media(max-width:632px){
+  .sessao-principal{
+    height:190vh;
+  }
+  .menu-wrapper{
+    background-color:rgb(53, 86, 107) ;
+    display:flex;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    width: 10rem;
+    height: 100vh;
+    z-index: 5;
+    flex-direction:column;
+    transform:translate3d(20rem,0,0);
+    transition:all .4s;
+  }
+  .menu-wrapper.menu-speed{
+    transform:translate3d(0,0,0)
+  }
+  .menu-wrapper>.img-logo{
+    position: absolute;
+    top: 2.7rem;
+  }
+  .menu-wrapper>.links-internos{  
+    margin:1rem;
+    position: absolute;
+    top:6rem;
+  }
+  .menu-wrapper>.links-internos>a{
+    margin: .4rem;
+  }
+  .fa-bars{
+    display:block;
+    z-index: 100;
+    visibility: inherit;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .text-section-smartphone{
+    font-size:15px;
+  }
+  
+}
+
+@media(max-width:485px){
+  .sessao-footer{
+    display:flex;
+    height:150vh;
+    align-items: center;
+    flex-direction: column;
+  }
+}

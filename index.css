@@ -278,10 +278,6 @@
 
 
 @media(max-width:1109px){
-  .sessao-header{
-
-  }
-
   .sessao-smartphone{
     display:flex;
     flex-direction: column;
@@ -298,6 +294,17 @@
 @media(max-width:746px){
   .sessao-principal{
     height:150vh;
+  }
+  .texts-section{
+    width: 80%;
+    margin:0;
+    position: relative;
+    top: -6rem;
+  }
+  .text-sessao-desktop{
+    position: relative;
+    top: -7rem;
+    width: 80%;
   }
   .img-section{
     position: relative;
@@ -357,6 +364,16 @@
 }
 
 @media(max-width:485px){
+  .elementos-centrais h1 {
+    font-size:15px;
+  }
+
+  .sessao-smartphone{
+    height: 100vh;
+  }
+  .text-section-smartphone{
+    width: 90%;
+  }
   .sessao-footer{
     display:flex;
     height:150vh;

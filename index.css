@@ -19,7 +19,7 @@
   position: relative;
   height: 60vh;
   width: 100%;
-  background-color: rgb(40, 44, 62);
+  background-color: rgb(42, 41, 48);
   border-bottom-left-radius: 5rem;
   overflow: hidden;
   display: flex;
@@ -379,5 +379,35 @@
     height:150vh;
     align-items: center;
     flex-direction: column;
+  }
+}
+
+@media Screen and (max-width:320px){
+  .sessao-principal> .title-section{
+    left: 2rem;
+    font-size:25px;
+  }
+  .img-section{
+    text-align: center;
+  }
+  .img-section img{
+    width: 80%;
+    text-align: center;
+  }
+
+  .texts-section-principal{
+    text-align: center;
+  }
+
+
+  .img-laptop{
+    text-align: center;
+  }
+  .img-laptop>img{
+    width: 80%;
+  }
+
+  .text-desktop{
+    text-align: center;
   }
 }

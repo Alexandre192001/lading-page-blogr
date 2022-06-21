@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+/* Exportando fontes */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
 
-:root{
-  --font--1:"Nunito";
-  --font--2:"Days One";
-  --font--3:"Suez One";
-  --font--4:"Original Surfer"
+/* Criando variaveis */
+:root {
+  --font--1: "Nunito";
+  --font--2: "Days One";
+  --font--3: "Suez One";
+  --font--4: "Original Surfer";
 }
-*{
+
+/* Zerando valores padrões do navegador */
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
-.sessao-header{
+/* Sessão header */
+.sessao-header {
   position: relative;
   height: 60vh;
   width: 100%;
@@ -26,7 +31,9 @@
   align-items: center;
   justify-content: center;
 }
-.fa-bars{
+
+/* Icone do header */
+.fa-bars {
   position: absolute;
   top: 2rem;
   font-size: 30px;
@@ -35,292 +42,305 @@
   visibility: hidden;
   display: none;
 }
-.img-background-sessao{
+
+/* capa da imagem - sessão header */
+.img-background-sessao {
   position: absolute;
   left: 30%;
   width: 100%;
   height: 100%;
 }
-.img-background-sessao>img{
-  opacity: .9;
+/* Imagem do header */
+.img-background-sessao > img {
+  opacity: 0.9;
   width: 50%;
-  height:100%;
+  height: 100%;
   transform: scale(4);
 }
 
-.menu-wrapper{
+/* Menu speed */
+.menu-wrapper {
   width: 100%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   z-index: 1;
   position: absolute;
   top: 1rem;
 }
-.menu-wrapper>.links-internos>a{
-  display:inline-block;
+/* Estilizando links */
+.menu-wrapper > .links-internos > a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
-  font-size:15px;
-  margin: 0 1rem ;
+  font-size: 15px;
+  margin: 0 1rem;
   font-weight: bold;
-  transition: all .4s;
-  font-family:var(--font--1);
+  transition: all 0.4s;
+  font-family: var(--font--1);
 }
-.links-internos>a:hover{
-  transform:scale(1.4);
+/* Colocando animação de hover nos links */
+.links-internos > a:hover {
+  transform: scale(1.4);
 }
-
-.btn-logar{
+/* Botão de criando contar */
+.btn-logar {
   font-family: var(--font--2);
   cursor: pointer;
-  margin:10px;
+  margin: 10px;
   border: none;
-  padding:1rem 2rem ;
-  border-radius:1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
-.btn-login{
-  background-color:transparent;
+/* Botão de login */
+.btn-login {
+  background-color: transparent;
   color: #fff;
   font-size: 10px;
-  transition:all .4s;
 }
-.btn-login:hover{
-  box-shadow: 2px 2px 2rem #000000;
+/* Animação de hover no botão de login */
+.btn-login:hover {
+  border: solid 1px #fff;
 }
-.btn-sign{
+/* Botão de criar conta */
+.btn-sign {
   color: red;
   font-size: 10px;
-  background-color:#fff;
+  background-color: #fff;
 }
-
-.elementos-centrais{
+/* textos centrais do header */
+.elementos-centrais {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   font-family: var(--font--1);
   color: #fff;
-  font-size:15px;
+  font-size: 15px;
 }
-.btns-elementos-centrais>button{
+/* Estilizando botões dos textos centrais */
+.btns-elementos-centrais > button {
   border: none;
   margin: 1rem;
-  border-radius:.4rem;
-  font-size:15px;
-  font-family:var(--font--3);
-  padding:1rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 15px;
+  font-family: var(--font--3);
+  padding: 1rem 1rem;
   cursor: pointer;
 }
-.btns-elementos-centrais>.btn-start{
-  background-color:#fff;
+/* Estilizando botões */
+.btns-elementos-centrais > .btn-start {
+  background-color: #fff;
   color: rgb(8, 24, 63);
-} 
-.btns-elementos-centrais>.btn-learn{
-  border:solid 1px #fff;
-  background-color:transparent;
+}
+.btns-elementos-centrais > .btn-learn {
+  border: solid 1px #fff;
+  background-color: transparent;
   color: #fff;
 }
-.btns-centrais{
-  transition:all .4s;
+.btns-centrais {
+  transition: all 0.4s;
 }
-.btns-centrais:hover{
-  transform:scale(1.2);
+.btns-centrais:hover {
+  transform: scale(1.2);
 }
 
-.sessao-principal{
-  height:100vh;
+/* Sessão principal */
+.sessao-principal {
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   align-items: center;
   justify-content: space-around;
-  overflow:hidden;
+  overflow: hidden;
 }
-
-.sessao-principal>.title-section{
+/* Titulo da sessão */
+.sessao-principal > .title-section {
   position: absolute;
   top: 2rem;
   left: 7rem;
-  font-size:30px;
+  font-size: 30px;
   font-family: var(--font--4);
 }
-
-.texts-section{
+/* Textos da sessão */
+.texts-section {
   display: flex;
   flex-direction: column;
   width: 40%;
   margin: 1rem;
   font-family: var(--font--1);
 }
-
-.texts-section-principal>h3{
-  font-size:20px;
+/* Estilizando subtitulo do texto */
+.texts-section-principal > h3 {
+  font-size: 20px;
   color: rgb(74, 74, 118);
 }
-
-.texts-section-principal>p{
+/* Estilizando paragrafo do texto */
+.texts-section-principal > p {
   font-weight: 600;
   font-size: 15px;
 }
-.text-introducing{
+/* Estilizando paragrafo do texto 2 */
+.text-introducing {
   margin: 2rem 0;
 }
 
-.sessao-smartphone{
+/* Sessão de celulares */
+.sessao-smartphone {
   position: relative;
   width: 100%;
   height: 50vh;
-  background-color:rgba(38, 38, 53, 0.893);
+  background-color: rgba(38, 38, 53, 0.893);
   border-top-right-radius: 4rem;
-  border-bottom-left-radius: 4rem;  
+  border-bottom-left-radius: 4rem;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-
-
-.background-section-smartphone{
+/* Imagem de fundo da sessão */
+.background-section-smartphone {
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: .2 ;
+  opacity: 0.2;
   top: -45rem;
   left: -1rem;
-  transform:scale(1.4)
+  transform: scale(1.4);
 }
-.smartphone-img>img{
-  width:18rem;
+/* Estilizando imagem de fundo */
+.smartphone-img > img {
+  width: 18rem;
   z-index: 1;
 }
-.text-section-smartphone{
-
+/* Texto da sessão de celulares */
+.text-section-smartphone {
   width: 30%;
   color: #fff;
   font-family: var(--font--1);
 }
-.text-section-smartphone>.text-h1{
+/* Pegando titulo da sessão */
+.text-section-smartphone > .text-h1 {
   color: rgba(177, 177, 221, 0.893);
   text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-
-.sessao-desktop{
-  height:100vh;
-  display:flex;
+/* Sessão de computadores */
+.sessao-desktop {
+  height: 100vh;
+  display: flex;
   align-items: center;
-  width: 100% ;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;  
+  justify-content: space-around;
   overflow: hidden;
 }
-.text-sessao-desktop{
+/* Titulo da sessão desktop */
+.text-sessao-desktop {
   font-family: var(--font--1);
   width: 50%;
 }
-
-.text-open-simp{
-  margin:1rem 0;
+/* Estilizando texto da sessão */
+.text-open-simp {
+  margin: 1rem 0;
 }
-
-
-.text-desktop>h3{
+/* Estilizando titulo da sessão */
+.text-desktop > h3 {
   color: rgba(38, 38, 53, 0.893);
 }
-.text-desktop>p{
-  font-weight:500;
+/* Estilizando paragrafo da sessão */
+.text-desktop > p {
+  font-weight: 500;
   color: #000;
 }
-
-
-.sessao-footer{
-  height:40vh;
+/* Sessão footer */
+.sessao-footer {
+  height: 40vh;
   position: relative;
   width: 100%;
   background-color: rgb(34, 34, 44);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content:space-around;
+  justify-content: space-around;
   border-top-right-radius: 4rem;
 }
-.img-footer{
+
+/* Estilizando imagem da sessão footer */
+.img-footer {
   margin: 2rem;
 }
-
-.links-footer{
+/* Links do footer */
+.links-footer {
   display: flex;
   flex-direction: column;
   font-family: var(--font--3);
   color: #fff;
 }
-
-.links-footer>a{
-  margin: .3rem 0;
+/* estilizando elemento A dos links */
+.links-footer > a {
+  margin: 0.3rem 0;
   color: #fff;
   text-decoration: none;
   font-family: var(--font--1);
   display: block;
 }
-
-.btn-voltar{
+/* Botão de voltar para o portfólio */
+.btn-voltar {
   display: block;
-  padding:.7rem .7rem;
-  border-radius: .4rem;
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.4rem;
   text-decoration: none;
   color: #fff;
   font-family: var(--font--4);
-  background-color:#788a;
+  background-color: #788a;
 }
-
-
-@media(max-width:1109px){
-  .sessao-smartphone{
-    display:flex;
+/* Responsividade */
+@media (max-width: 1109px) {
+  .sessao-smartphone {
+    display: flex;
     flex-direction: column;
-    height:60vh;
+    height: 60vh;
   }
 }
 
-@media(max-width:1013px){
-  .sessao-desktop{
-    height:150vh
+@media (max-width: 1013px) {
+  .sessao-desktop {
+    height: 150vh;
   }
 }
 
-@media(max-width:746px){
-  .sessao-principal{
-    height:150vh;
+@media (max-width: 746px) {
+  .sessao-principal {
+    height: 150vh;
   }
-  .texts-section{
+  .texts-section {
     width: 80%;
-    margin:0;
+    margin: 0;
     position: relative;
     top: -6rem;
   }
-  .text-sessao-desktop{
+  .text-sessao-desktop {
     position: relative;
     top: -7rem;
     width: 80%;
   }
-  .img-section{
+  .img-section {
     position: relative;
     top: 4em;
   }
 }
 
-
-
-@media(max-width:632px){
-  .sessao-principal{
-    height:190vh;
+@media (max-width: 632px) {
+  .sessao-principal {
+    height: 190vh;
   }
-  .menu-wrapper{
-    background-color:rgb(101, 138, 162) ;
-    display:flex;
+  .menu-wrapper {
+    background-color: rgb(101, 138, 162);
+    display: flex;
     position: absolute;
     top: 0;
     align-items: center;
@@ -329,27 +349,27 @@
     width: 10rem;
     height: 100vh;
     z-index: 5;
-    flex-direction:column;
-    transform:translate3d(20rem,0,0);
-    transition:all .4s;
+    flex-direction: column;
+    transform: translate3d(20rem, 0, 0);
+    transition: all 0.4s;
   }
-  .menu-wrapper.menu-speed{
-    transform:translate3d(0,0,0)
+  .menu-wrapper.menu-speed {
+    transform: translate3d(0, 0, 0);
   }
-  .menu-wrapper>.img-logo{
+  .menu-wrapper > .img-logo {
     position: absolute;
     top: 2.7rem;
   }
-  .menu-wrapper>.links-internos{  
-    margin:1rem;
+  .menu-wrapper > .links-internos {
+    margin: 1rem;
     position: absolute;
-    top:6rem;
+    top: 6rem;
   }
-  .menu-wrapper>.links-internos>a{
-    margin: .4rem;
+  .menu-wrapper > .links-internos > a {
+    margin: 0.4rem;
   }
-  .fa-bars{
-    display:block;
+  .fa-bars {
+    display: block;
     z-index: 100;
     visibility: inherit;
     position: absolute;
@@ -357,57 +377,55 @@
     top: 1rem;
   }
 
-  .text-section-smartphone{
-    font-size:15px;
+  .text-section-smartphone {
+    font-size: 15px;
   }
-  
 }
 
-@media(max-width:485px){
+@media (max-width: 485px) {
   .elementos-centrais h1 {
-    font-size:15px;
+    font-size: 15px;
   }
 
-  .sessao-smartphone{
+  .sessao-smartphone {
     height: 100vh;
   }
-  .text-section-smartphone{
+  .text-section-smartphone {
     width: 90%;
   }
-  .sessao-footer{
-    display:flex;
-    height:150vh;
+  .sessao-footer {
+    display: flex;
+    height: 150vh;
     align-items: center;
     flex-direction: column;
   }
 }
 
-@media Screen and (max-width:320px){
-  .sessao-principal> .title-section{
+@media Screen and (max-width: 320px) {
+  .sessao-principal > .title-section {
     left: 2rem;
-    font-size:25px;
+    font-size: 25px;
   }
-  .img-section{
+  .img-section {
     text-align: center;
   }
-  .img-section img{
+  .img-section img {
     width: 80%;
     text-align: center;
   }
 
-  .texts-section-principal{
+  .texts-section-principal {
     text-align: center;
   }
 
-
-  .img-laptop{
+  .img-laptop {
     text-align: center;
   }
-  .img-laptop>img{
+  .img-laptop > img {
     width: 80%;
   }
 
-  .text-desktop{
+  .text-desktop {
     text-align: center;
   }
 }

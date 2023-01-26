@@ -23,7 +23,6 @@
 <li>Abra o prompt do vscode;</li>
 <li>Escreva - git clone https://github.com/Alexandre192001/lading-page-blogr/</li>
 <li>cd lading-page-blogr</li>
-<li>npm install</li>
 </ul>
 <hr>
 URL Demo :  https://lading-page-blogr-alexandre.netlify.app
